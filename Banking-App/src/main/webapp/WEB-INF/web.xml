@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>Banking</display-name>
+	<filter>
+		<description>
+  	</description>
+		<display-name>AuthFilter</display-name>
+		<filter-name>AuthFilter</filter-name>
+		<filter-class>filters.AuthFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>AuthFilter</filter-name>
+		<url-pattern>/Home</url-pattern>
+	</filter-mapping>
+	<servlet>
+		<description>
+  	</description>
+		<display-name>RegisterController</display-name>
+		<servlet-name>RegisterController</servlet-name>
+		<servlet-class>controller.RegisterController</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+  	</description>
+		<display-name>LoginController</display-name>
+		<servlet-name>LoginController</servlet-name>
+		<servlet-class>controller.LoginController</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+  	</description>
+		<display-name>HomeController</display-name>
+		<servlet-name>HomeController</servlet-name>
+		<servlet-class>controller.HomeController</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>DownLoadController</display-name>
+		<servlet-name>DownLoadController</servlet-name>
+		<servlet-class>controller.DownLoadController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterController</servlet-name>
+		<url-pattern>/Register</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginController</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HomeController</servlet-name>
+		<url-pattern>/Home</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DownLoadController</servlet-name>
+		<url-pattern>/Download</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>views/index.html</welcome-file>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
